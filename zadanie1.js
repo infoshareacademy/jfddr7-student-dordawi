@@ -6,12 +6,12 @@ let a = [1, 3, 2];
 let b = [2, 3, 12];
 
 function outcome(a, b) {
-  let c = a.concat(b); //łączenie dwóch tablic
-  let set = new Set(c); //tworzy obiekt Set
-  let arrayJoined = [...set]; //tworzy złączoną tablicę
+  let c = a.concat(b); //Łączenie dwóch tablic.
+  let set = new Set(c); //Tworzy obiekt Set.
+  let arrayJoined = [...set]; //Tworzy złączoną tablicę.
   let sort = arrayJoined.sort(function (a, b) {
     return a - b;
-  }); //funkcja sort która sortuje numery od największej do najmniejszej wartości
+  }); //Funkcja sort która sortuje numery od największej do najmniejszej wartości.
   console.log(sort);
 }
 
