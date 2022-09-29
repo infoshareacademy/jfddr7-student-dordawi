@@ -20,7 +20,7 @@ const library = [
 
 function sortByID(a, b) {
   return a.libraryID - b.libraryID;
-} //funkcja przypina się do klucza libraryID
+} //Funkcja przypina się do klucza libraryID.
 
-library.sort(sortByID); //metoda sort() ustawia rosnąco (funkcja pomocnicza) obiekty w tablicy library sortując je po ID
+library.sort(sortByID); //Metoda sort() ustawia rosnąco (funkcja pomocnicza) obiekty w tablicy library sortując je po ID.
 console.log(library);
