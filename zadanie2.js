@@ -8,14 +8,14 @@ let b = [100, 2, 1, 10];
 function ex2(a, b) {
   let c = a.filter(function (obj) {
     return b.indexOf(obj) == -1;
-  }); //funkcja zwraca do zmiennej c te wartości z tablicy a których nie ma w tablicy b
+  }); //Funkcja zwraca do zmiennej c te wartości z tablicy a których nie ma w tablicy b.
   let d = b.filter(function (obj) {
     return a.indexOf(obj) == -1;
-  }); //funkcja zwraca do zmiennej d te wartości z tablicy b których nie ma w tablicy a
+  }); //Funkcja zwraca do zmiennej d te wartości z tablicy b których nie ma w tablicy a.
 
-  let joinedArray = c.concat(d); //łaczy tablice c i d
+  let joinedArray = c.concat(d); //Łączy tablice c i d.
   let sort = joinedArray.sort(function (c, d) {
     return c - d;
-  }); //sortuje rosnąco tablicę joinedArray
+  }); //Sortuje rosnąco tablicę joinedArray.
   console.log(sort);
 }
