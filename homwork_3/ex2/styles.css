@@ -18,3 +18,9 @@
   font-weight: bold;
   text-decoration: underline;
 }
+
+#showComment {
+  height: auto;
+  border: 1px solid red;
+  margin-top: 10px;
+}
