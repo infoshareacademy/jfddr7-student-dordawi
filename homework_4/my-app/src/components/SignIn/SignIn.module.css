@@ -5,7 +5,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: linear-gradient(#414141, #000000);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
 }
 
 .header {
@@ -37,7 +41,7 @@
   height: 25px;
   border: 0.5px black solid;
   border-radius: 8px;
-  background-color: #fed8b1;
+  background-color: #bcebf0;
   cursor: pointer;
 }
 

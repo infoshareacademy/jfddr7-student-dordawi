@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: linear-gradient(#414141, #000000);
+  background: linear-gradient(#e49f46, #f50000);
 }
 
 .header {
@@ -25,7 +25,7 @@
 .inputs input {
   width: 90%;
   border-radius: 8px;
-  border: 1px black solid;
+  border: 1px rgb(99, 1, 1) solid;
   outline: none;
   height: 20px;
   margin: 10px;
@@ -35,12 +35,12 @@
 .form button {
   width: 150px;
   height: 25px;
-  border: 0.5px black solid;
+  border: 1px rgb(99, 1, 1) solid;
   border-radius: 8px;
-  background-color: #fed8b1;
+  background-color: orange;
   cursor: pointer;
 }
 
 .form button:hover {
-  background-color: orange;
+  background-color: rgb(105, 156, 37);
 }
