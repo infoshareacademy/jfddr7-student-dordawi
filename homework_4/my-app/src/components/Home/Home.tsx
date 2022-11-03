@@ -5,6 +5,7 @@ import styles from "./Home.module.css";
 
 import { signOut } from "firebase/auth";
 import { auth } from "./../../firebase-config";
+import { SongList } from "../SongsList/SongsList";
 
 export const Home: FC = () => {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ export const Home: FC = () => {
   return (
     <div className={styles.container}>
       <p className={styles.header}>Witaj w naszej aplikacji {username}</p>
-
+      <SongList />
       <button className={styles.logoutBtn} type="button" onClick={onLogout}>
         Wyloguj
       </button>

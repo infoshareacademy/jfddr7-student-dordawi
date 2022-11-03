@@ -8,10 +8,10 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 
-interface RegisterProps {
-  registerEmail: string;
-  registerPassword: string;
-}
+// interface RegisterProps {
+//   registerEmail: string;
+//   registerPassword: string;
+// }
 
 export const SignUp = () => {
   const [registerEmail, setRegisterEmail] = useState("");
@@ -26,7 +26,7 @@ export const SignUp = () => {
 
     await signInWithEmailAndPassword(auth, registerEmail, registerPassword);
 
-    const user = { registerEmail, registerPassword };
+    // const user = { registerEmail, registerPassword };
     setUsername(registerEmail);
     navigate("/signin");
   };
