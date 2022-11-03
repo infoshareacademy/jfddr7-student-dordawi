@@ -26,7 +26,7 @@ export const SignUp = () => {
 
     await signInWithEmailAndPassword(auth, registerEmail, registerPassword);
 
-    // const user = { registerEmail, registerPassword };
+    const user = { registerEmail, registerPassword };
     setUsername(registerEmail);
     navigate("/signin");
   };

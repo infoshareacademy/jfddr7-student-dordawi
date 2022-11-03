@@ -1,13 +1,31 @@
 import styles from "./SongsList.module.css";
 import { doc, setDoc } from "firebase/firestore";
+import { collection, getDocs, query } from "firebase/firestore";
 import { v4 as uuid } from "uuid";
 import { Context } from "../../ContextProvider";
 import { db } from "./../../firebase-config";
-import { useContext, useRef, useState } from "react";
+import { useContext, useRef, useState, useEffect } from "react";
 
 export const SongList = () => {
   const { songs, setSongs, username } = useContext(Context);
   const [currentSong, setCurrentSong] = useState("");
+  const [songList, setSongList] = useState<string[]>([]);
+  const savedSongs: string[] = [];
+
+  //const songsCollectionRef = collection(db, 'songs')
+
+  useEffect(() => {
+    const displaySongs = async () => {
+      const q = query(collection(db, "songs"));
+
+      const querySnapshot = await getDocs(q);
+      querySnapshot.forEach((doc) => {
+        savedSongs.push(doc.data().song);
+      });
+      displaySongs();
+    };
+  }, []);
+
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   const addSong = async (): Promise<void> => {
@@ -44,6 +62,13 @@ export const SongList = () => {
             Add the song
           </button>
         </section>
+
+        <div className={styles.list}>
+          {savedSongs.map((element) => (
+            <p className={styles.song}>{element}</p>
+          ))}
+        </div>
+
         <div className={styles.list}>
           {songs.map((song, index) => (
             <p className={styles.song} key={index}>
@@ -56,6 +81,9 @@ export const SongList = () => {
   );
 };
 
-/*match /{document=**} {
-    allow read, write: if request.auth != null;
-} */
+/*//     const getSongs = async () => {
+//         const data = await getDocs(songsCollectionRef);
+//         setSongList(data.docs.map((doc) => ({ ...doc.data()})));
+//     };
+
+//     getSongs();*/
