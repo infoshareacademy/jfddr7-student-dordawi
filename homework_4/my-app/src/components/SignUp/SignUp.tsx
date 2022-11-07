@@ -1,6 +1,6 @@
 import styles from "./SignUp.module.css";
 import { useState, useContext } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { auth } from "../../firebase-config";
 import { Context } from "../../ContextProvider";
 import {
@@ -55,6 +55,9 @@ export const SignUp = () => {
           Zarejestruj
         </button>
       </form>
+      <p>
+        <Link to="/signin">Go to login</Link>
+      </p>
     </div>
   );
 };

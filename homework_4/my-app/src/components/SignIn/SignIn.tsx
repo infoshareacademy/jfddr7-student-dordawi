@@ -1,6 +1,6 @@
 import styles from "./SignIn.module.css";
 import { useState, useContext } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { auth } from "../../firebase-config";
 import { Context } from "../../ContextProvider";
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -44,15 +44,10 @@ export const SignIn = () => {
           <button type="button" onClick={onLogin}>
             Zaloguj
           </button>
-          {/* <button
-            type="button"
-            onClick={() => {
-              navigate("/registration");
-            }}
-          >
-            Przejdź do rejestracji
-          </button> */}
         </form>
+        <p>
+          <Link to="/signup">Go to registration</Link>
+        </p>
       </div>
     </>
   );
