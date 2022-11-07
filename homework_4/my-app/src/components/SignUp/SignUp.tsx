@@ -8,11 +8,6 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 
-// interface RegisterProps {
-//   registerEmail: string;
-//   registerPassword: string;
-// }
-
 export const SignUp = () => {
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
