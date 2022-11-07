@@ -3,12 +3,11 @@ import { doc, setDoc } from "firebase/firestore";
 import { v4 as uuid } from "uuid";
 import { Context } from "../../ContextProvider";
 import { db } from "./../../firebase-config";
-import { useContext, useRef, useState, useEffect } from "react";
+import { useContext, useRef, useState } from "react";
 
 export const SongList = () => {
   const { songs, setSongs, username } = useContext(Context);
   const [currentSong, setCurrentSong] = useState("");
-  const savedSongs: string[] = [];
 
   const inputRef = useRef<HTMLInputElement | null>(null);
 
@@ -48,21 +47,12 @@ export const SongList = () => {
         </section>
 
         <div className={styles.list}>
-          {savedSongs.map((element) => (
-            <p className={styles.song}>{element}</p>
-          ))}
-        </div>
-
-        {
-          //poniżej kod na listę wyświetlającą piosenki z inputa
-          /* <div className={styles.list}>
           {songs.map((song, index) => (
             <p className={styles.song} key={index}>
               {song}
             </p>
           ))}
-        </div> */
-        }
+        </div>
       </div>
     </div>
   );
