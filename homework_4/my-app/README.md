@@ -1,4 +1,4 @@
-## Simple little app made in React
+## Simple little app made in React with Type Scrpit
 
 1. Create a registration screen under the url /signup with 2 fields for email and password and a register button, which will register the user in firebase and redirect to the login screen - 3 points
 
