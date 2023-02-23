@@ -1,0 +1,39 @@
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  gap: 15px;
+}
+input {
+  width: 90%;
+  border-radius: 8px;
+  border: 0.5px rgb(110, 110, 110) solid;
+  outline: none;
+  height: 20px;
+  margin: 10px;
+  padding: 5px;
+}
+.addSongBtn {
+  height: 25px;
+  font-weight: bolder;
+  border: 0.5px rgb(110, 110, 110) solid;
+  border-radius: 8px;
+  background-color: #b8e5eb;
+  color: rgb(216, 112, 157);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.song {
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}

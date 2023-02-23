@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 1px solid black;
+}
+
+.nameWrap,
+.surnameWrap,
+.adressWrap {
+  text-align: center;
+}
+.output {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#nameOutput {
+  min-height: 20px;
+  min-width: 10px;
+  border: 1px solid black;
+}
+#surnameOutput {
+  min-height: 20px;
+  min-width: 10px;
+  border: 1px solid black;
+}
+#adressOutput {
+  min-height: 20px;
+  min-width: 10px;
+  border: 1px solid black;
+}
+
+button {
+  margin-left: 250px;
+  margin-top: 10px;
+}

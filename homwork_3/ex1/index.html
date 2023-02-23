@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <title>Homework 3/ex1</title>
+  </head>
+  <body>
+    <div class="formContainer">
+      <form id="form" class="form" onsubmit="return false;">
+        <div class="nameWrap">
+          <label for="name">Imię</label>
+          <input name="name" id="name" placeholder="Name" />
+        </div>
+        <div class="surnameWrap">
+          <label for="surname">Nazwisko</label>
+          <input name="surname" id="surname" placeholder="Surame" />
+        </div>
+        <div class="adressWrap">
+          <label for="adress">Adres</label>
+          <input name="asdress" id="adress" placeholder="Adress" />
+        </div>
+      </form>
+    </div>
+
+    <button type="submit" id="submitButton">Dodaj</button>
+
+    <div class="output">
+      <div id="nameOutput"></div>
+      <div id="surnameOutput"></div>
+      <div id="adressOutput"></div>
+    </div>
+
+    <script src="main.js"></script>
+    <!-- ------------ ZADANIE 2 -------------s
+    <div class="intervalContainer">
+      <p id="intervalComment">-</p>
+      <button type="button" id="stopInterval">Stop</button>
+      <button type="button" id="startInterval">Start</button>
+    </div>
+    ------------ ZADANIE 4 -------------
+    <div id="productsContainer" class="productsContainer"></div>
+
+    <!--  -->
+  </body>
+</html>

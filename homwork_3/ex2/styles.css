@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bodyStyle {
+  font-size: 12px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.postHeaderStyle {
+  font-size: 12px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#showComment {
+  height: auto;
+  border: 1px solid red;
+  margin-top: 10px;
+}
